@@ -1,0 +1,119 @@
+/*
+  Trinta Dezessete (30DZ7) — Design Tokens
+  Fonte: cores extraídas por amostragem de pixel do logo oficial (1.png, 21/09/2026).
+  Escalas geradas por interpolação HSL a partir das 3 cores-base; ainda não conferidas
+  contra o SVG/PDF vetorial original da marca — tratar como alta confiança, não como
+  fonte definitiva até a produtora confirmar com o arquivo vetorial.
+*/
+
+:root {
+  /* ---- Cores-base da marca (medidas do logo) ---- */
+  --color-brand-carvao: #373536;   /* fundo escuro da marca */
+  --color-brand-branco: #FFFFFF;
+  --color-brand-verde:  #57A795;   /* verde-água de destaque ("DZ7") */
+
+  /* ---- Escala de destaque (verde-água) ---- */
+  --color-accent-50:  #EEF6F4;
+  --color-accent-100: #DDEEEA;
+  --color-accent-200: #C3E0D9;
+  --color-accent-300: #A1CEC4;
+  --color-accent-400: #80BDAF;
+  --color-accent-500: #5EAB9A; /* mais próxima do verde de marca; uso decorativo, ícones, fundos escuros */
+  --color-accent-600: #4D9484; /* 3.6:1 sobre branco — só texto grande (≥24px) ou UI, não texto de corpo */
+  --color-accent-700: #3F796C; /* 5.0:1 sobre branco — use este para texto/links de corpo em fundo claro (AA) */
+  --color-accent-800: #315E54; /* 7.3:1 sobre branco — texto pequeno de alto contraste */
+  --color-accent-900: #23433C;
+
+  /* ---- Escala neutra (carvão) ---- */
+  --color-neutral-0:   #FFFFFF;
+  --color-neutral-50:  #F7F7F7;
+  --color-neutral-100: #EDEDED;
+  --color-neutral-200: #D9D8D9;
+  --color-neutral-300: #B4B1B2;
+  --color-neutral-400: #8E8A8C;
+  --color-neutral-500: #686466;
+  --color-neutral-600: #4E4B4C;
+  --color-neutral-700: #3E3C3D;
+  --color-neutral-800: #2F2D2E;
+  --color-neutral-900: #1F1E1F;
+  --color-neutral-950: #151414;
+
+  /* ---- Papéis semânticos — modo claro (padrão) ---- */
+  --surface-primary:     var(--color-neutral-0);
+  --surface-secondary:   var(--color-neutral-50);
+  --surface-elevated:    var(--color-neutral-0);
+  --text-primary:        var(--color-neutral-900);
+  --text-secondary:      var(--color-neutral-500);
+  --text-on-accent:      var(--color-neutral-0);
+  --text-link:           var(--color-accent-700);
+  --border-subtle:       var(--color-neutral-200);
+  --accent-interactive:  var(--color-accent-700);
+  --accent-interactive-hover: var(--color-accent-800);
+  --accent-decorative:   var(--color-accent-500);
+
+  /* ---- Tipografia (fonte de sistema — ver marca.md) ---- */
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
+
+  /* Tracking/leading por escala — nunca um valor fixo para todos os tamanhos (regra apple-design §15) */
+  --text-display-size: clamp(2rem, 4vw, 3.5rem);
+  --text-display-leading: 1.05;
+  --text-display-tracking: -0.02em;
+
+  --text-heading-size: clamp(1.25rem, 2vw, 1.75rem);
+  --text-heading-leading: 1.2;
+  --text-heading-tracking: -0.01em;
+
+  --text-body-size: 1rem;
+  --text-body-leading: 1.5;
+  --text-body-tracking: 0em;
+
+  --text-caption-size: 0.8125rem;
+  --text-caption-leading: 1.4;
+  --text-caption-tracking: 0.01em;
+
+  /* ---- Espaçamento e forma ---- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --shadow-elevated: 0 8px 30px rgba(0, 0, 0, 0.10);
+  --shadow-chip: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* ---- Modo escuro ---- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --surface-primary:     var(--color-neutral-900);
+    --surface-secondary:   var(--color-neutral-950);
+    --surface-elevated:    var(--color-neutral-800);
+    --text-primary:        var(--color-neutral-50);
+    --text-secondary:      var(--color-neutral-300);
+    --text-on-accent:      var(--color-neutral-950);
+    --text-link:           var(--color-accent-300);
+    --border-subtle:       var(--color-neutral-700);
+    --accent-interactive:  var(--color-accent-400);
+    --accent-interactive-hover: var(--color-accent-300);
+    --accent-decorative:   var(--color-accent-500);
+    --shadow-elevated: 0 8px 30px rgba(0, 0, 0, 0.45);
+  }
+}
+
+:root[data-theme="dark"] {
+  --surface-primary:     var(--color-neutral-900);
+  --surface-secondary:   var(--color-neutral-950);
+  --surface-elevated:    var(--color-neutral-800);
+  --text-primary:        var(--color-neutral-50);
+  --text-secondary:      var(--color-neutral-300);
+  --text-on-accent:      var(--color-neutral-950);
+  --text-link:           var(--color-accent-300);
+  --border-subtle:       var(--color-neutral-700);
+  --accent-interactive:  var(--color-accent-400);
+  --accent-interactive-hover: var(--color-accent-300);
+  --accent-decorative:   var(--color-accent-500);
+  --shadow-elevated: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Acessibilidade — reduced motion / transparency (ver skill apple-design §14) */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
