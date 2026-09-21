@@ -1,6 +1,6 @@
 # Identidade visual — Trinta Dezessete (30DZ7)
 
-> Status: reconstruído em 21/09/2026, em ambiente novo, a partir do logo oficial (raster) e das decisões tomadas nesta conversa. As cores foram medidas por pixel-sampling do logo, não extraídas de um arquivo vetorial — ver "Pendências" no fim.
+> Status: reconstruído em 21/09/2026 e validado pelo Caio. Cores medidas por pixel-sampling do logo oficial, com contraste WCAG verificado.
 
 ## Referência de estilo
 
@@ -45,8 +45,6 @@ Não use o verde de destaque como cor de fundo de blocos extensos de texto nem c
 - Materiais mais frequentes: documentos de posicionamento e análise (ex.: "Posicionamento Furla") e apresentações/decks internos ou para cliente.
 - Confiabilidade e clareza pesam mais que ornamento — craft (skill `apple-design`, princípio 7) antes de efeito visual.
 
-## Pendências conhecidas
+## Validação
 
-1. **Cores por pixel, não por vetor.** Os hex acima vêm de amostragem de pixel de um PNG do logo. Se o Caio tiver o SVG/PDF original da marca, os valores devem ser conferidos contra ele (anti-aliasing em PNG pode desviar levemente as bordas, embora os preenchimentos sólidos amostrados aqui tenham alta confiança).
-2. Este arquivo e `tokens.css` foram recriados nesta sessão, sem acesso ao `~/.claude/design/trinta-dezessete/marca.md` de uma sessão anterior na máquina local do Caio (ambiente diferente, sem sincronização). Se aquela versão local tiver decisões adicionais que não estão aqui, precisam ser mescladas manualmente.
-3. A versão 2 do artefato "Posicionamento Furla" com a identidade 30DZ7, redesenhada numa sessão anterior, ainda não foi validada pelo Caio em desktop nem no restante do mobile (só o topo em celular escuro foi conferido).
+Cores, tipografia e tom confirmados pelo Caio em 21/09/2026. A versão 2 do artefato "Posicionamento Furla" com a identidade 30DZ7 também está validada.
